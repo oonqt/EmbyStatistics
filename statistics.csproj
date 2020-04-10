@@ -9,6 +9,7 @@
 
 <ItemGroup>
   <None Remove="Configuration\configPage.html" />
+  <None Remove="thumb.png" />
 </ItemGroup>
 
 <ItemGroup>
@@ -17,6 +18,7 @@
   <EmbeddedResource Include="Configuration\moviePage.html" />
   <EmbeddedResource Include="Configuration\showOverview.html" />
   <EmbeddedResource Include="Configuration\userBased.html" />
+  <EmbeddedResource Include="thumb.png" />
 </ItemGroup>
 
 <ItemGroup>
@@ -28,4 +30,7 @@
   <Folder Include="Models\Configuration\" />
 </ItemGroup>
 
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy &quot;$(TargetPath)&quot; &quot;%AppData%\Emby-Server\programdata\plugins\&quot; /y" />
+  </Target>
 </Project>
