@@ -6,9 +6,9 @@ using MediaBrowser.Common.Plugins;
 using MediaBrowser.Model.Drawing;
 using MediaBrowser.Model.Plugins;
 using MediaBrowser.Model.Serialization;
-using statistics.Configuration;
+using EmbyStatistics.Configuration;
 
-namespace statistics
+namespace EmbyStatistics
 {
     public class Plugin : BasePlugin<PluginConfiguration>, IHasWebPages, IHasThumbImage
     {

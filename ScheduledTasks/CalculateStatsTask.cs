@@ -13,15 +13,15 @@ using MediaBrowser.Model.Entities;
 using MediaBrowser.Model.IO;
 using MediaBrowser.Model.Logging;
 using MediaBrowser.Model.Tasks;
-using statistics;
-using statistics.Calculators;
-using statistics.Configuration;
-using statistics.Models.Configuration;
-using Statistics.Api;
-using Statistics.Helpers;
-using Statistics.ViewModel;
+using EmbyStatistics;
+using EmbyStatistics.Calculators;
+using EmbyStatistics.Configuration;
+using EmbyStatistics.Models.Configuration;
+using EmbyStatistics.Api;
+using EmbyStatistics.Helpers;
+using EmbyStatistics.ViewModel;
 
-namespace Statistics.ScheduledTasks
+namespace EmbyStatistics.ScheduledTasks
 {
     public class CalculateStatsTask : IScheduledTask
     {

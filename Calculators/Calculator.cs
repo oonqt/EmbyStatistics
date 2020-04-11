@@ -12,15 +12,15 @@ using MediaBrowser.Controller.Library;
 using MediaBrowser.Model.Entities;
 using MediaBrowser.Model.IO;
 using MediaBrowser.Model.Logging;
-using statistics.Calculators;
-using statistics.Models;
-using statistics.Models.Configuration;
-using Statistics.Api;
-using Statistics.Enum;
-using Statistics.Models;
-using Statistics.ViewModel;
+using EmbyStatistics.Calculators;
+using EmbyStatistics.Models;
+using EmbyStatistics.Models.Configuration;
+using EmbyStatistics.Api;
+using EmbyStatistics.Enum;
+using EmbyStatistics.Models;
+using EmbyStatistics.ViewModel;
 
-namespace Statistics.Helpers
+namespace EmbyStatistics.Helpers
 {
     public class Calculator : BaseCalculator
     {
@@ -486,44 +486,44 @@ namespace Statistics.Helpers
             var list = new List<MovieQuality>
             {
 
-                new MovieQuality { Quality = VideoQuality.UNKNOWN, Movies = new List<statistics.Models.Movie>() },
-                new MovieQuality { Quality = VideoQuality.DVD, Movies = new List<statistics.Models.Movie>() },
-                new MovieQuality { Quality = VideoQuality.Q700, Movies = new List<statistics.Models.Movie>() },
-                new MovieQuality { Quality = VideoQuality.Q1260, Movies = new List<statistics.Models.Movie>() },
-                new MovieQuality { Quality = VideoQuality.Q1900, Movies = new List<statistics.Models.Movie>() },
-                new MovieQuality { Quality = VideoQuality.Q2500, Movies = new List<statistics.Models.Movie>() },
-                new MovieQuality { Quality = VideoQuality.Q3800, Movies = new List<statistics.Models.Movie>() }
+                new MovieQuality { Quality = VideoQuality.UNKNOWN, Movies = new List<EmbyStatistics.Models.Movie>() },
+                new MovieQuality { Quality = VideoQuality.DVD, Movies = new List<EmbyStatistics.Models.Movie>() },
+                new MovieQuality { Quality = VideoQuality.Q700, Movies = new List<EmbyStatistics.Models.Movie>() },
+                new MovieQuality { Quality = VideoQuality.Q1260, Movies = new List<EmbyStatistics.Models.Movie>() },
+                new MovieQuality { Quality = VideoQuality.Q1900, Movies = new List<EmbyStatistics.Models.Movie>() },
+                new MovieQuality { Quality = VideoQuality.Q2500, Movies = new List<EmbyStatistics.Models.Movie>() },
+                new MovieQuality { Quality = VideoQuality.Q3800, Movies = new List<EmbyStatistics.Models.Movie>() }
             };
-            var listDVD = new List<statistics.Models.Movie>();
+            var listDVD = new List<EmbyStatistics.Models.Movie>();
             foreach (var movie in movies.OrderBy(x => x.SortName))
             {
                 if ((movie.GetMediaStreams().FirstOrDefault(s => s.Type == MediaStreamType.Video)?.Width ?? 0) == 0)
                 {
-                    list[0].Movies.Add(new statistics.Models.Movie { Id = movie.Id.ToString(), Name = movie.Name, Year = movie.ProductionYear });
+                    list[0].Movies.Add(new EmbyStatistics.Models.Movie { Id = movie.Id.ToString(), Name = movie.Name, Year = movie.ProductionYear });
                 }
                 else if (movie.GetMediaStreams().FirstOrDefault(s => s.Type == MediaStreamType.Video)?.Width < 700)
                 {
-                    list[1].Movies.Add(new statistics.Models.Movie { Id = movie.Id.ToString(), Name = movie.Name, Year = movie.ProductionYear });
+                    list[1].Movies.Add(new EmbyStatistics.Models.Movie { Id = movie.Id.ToString(), Name = movie.Name, Year = movie.ProductionYear });
                 }
                 else if (movie.GetMediaStreams().FirstOrDefault(s => s.Type == MediaStreamType.Video)?.Width < 1260)
                 {
-                    list[2].Movies.Add(new statistics.Models.Movie { Id = movie.Id.ToString(), Name = movie.Name, Year = movie.ProductionYear });
+                    list[2].Movies.Add(new EmbyStatistics.Models.Movie { Id = movie.Id.ToString(), Name = movie.Name, Year = movie.ProductionYear });
                 }
                 else if (movie.GetMediaStreams().FirstOrDefault(s => s.Type == MediaStreamType.Video)?.Width < 1900)
                 {
-                    list[3].Movies.Add(new statistics.Models.Movie { Id = movie.Id.ToString(), Name = movie.Name, Year = movie.ProductionYear });
+                    list[3].Movies.Add(new EmbyStatistics.Models.Movie { Id = movie.Id.ToString(), Name = movie.Name, Year = movie.ProductionYear });
                 }
                 else if (movie.GetMediaStreams().FirstOrDefault(s => s.Type == MediaStreamType.Video)?.Width < 2500)
                 {
-                    list[4].Movies.Add(new statistics.Models.Movie { Id = movie.Id.ToString(), Name = movie.Name, Year = movie.ProductionYear });
+                    list[4].Movies.Add(new EmbyStatistics.Models.Movie { Id = movie.Id.ToString(), Name = movie.Name, Year = movie.ProductionYear });
                 }
                 else if (movie.GetMediaStreams().FirstOrDefault(s => s.Type == MediaStreamType.Video)?.Width < 3800)
                 {
-                    list[5].Movies.Add(new statistics.Models.Movie { Id = movie.Id.ToString(), Name = movie.Name, Year = movie.ProductionYear });
+                    list[5].Movies.Add(new EmbyStatistics.Models.Movie { Id = movie.Id.ToString(), Name = movie.Name, Year = movie.ProductionYear });
                 }
                 else if (movie.GetMediaStreams().FirstOrDefault(s => s.Type == MediaStreamType.Video)?.Width >= 3800)
                 {
-                    list[6].Movies.Add(new statistics.Models.Movie { Id = movie.Id.ToString(), Name = movie.Name, Year = movie.ProductionYear });
+                    list[6].Movies.Add(new EmbyStatistics.Models.Movie { Id = movie.Id.ToString(), Name = movie.Name, Year = movie.ProductionYear });
                 }
             }
 

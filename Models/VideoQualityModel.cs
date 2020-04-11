@@ -1,6 +1,6 @@
-﻿using Statistics.Enum;
+﻿using EmbyStatistics.Enum;
 
-namespace Statistics.Models
+namespace EmbyStatistics.Models
 {
     public class VideoQualityModel
     {

@@ -1,7 +1,7 @@
 ﻿using System;
-using Statistics.Enum;
+using EmbyStatistics.Enum;
 
-namespace Statistics.ViewModel
+namespace EmbyStatistics.ViewModel
 {
     public class RunTime : IComparable<RunTime>
     {

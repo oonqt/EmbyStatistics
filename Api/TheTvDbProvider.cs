@@ -11,7 +11,7 @@ using MediaBrowser.Common.Net;
 using MediaBrowser.Controller;
 using MediaBrowser.Model.IO;
 
-namespace Statistics.Api
+namespace EmbyStatistics.Api
 {
     public class TheTvDbProvider
     {

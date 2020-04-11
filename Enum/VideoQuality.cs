@@ -1,4 +1,4 @@
-﻿namespace Statistics.Enum
+﻿namespace EmbyStatistics.Enum
 {
     public enum VideoQuality
     {

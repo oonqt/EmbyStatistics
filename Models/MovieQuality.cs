@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using MediaBrowser.Controller.Entities.Movies;
-using Statistics.Enum;
+using EmbyStatistics.Enum;
 
-namespace statistics.Models
+namespace EmbyStatistics.Models
 {
     public class MovieQuality
     {

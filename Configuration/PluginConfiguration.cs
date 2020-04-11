@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using MediaBrowser.Model.Plugins;
-using statistics.Models;
-using statistics.Models.Configuration;
-using Statistics.Api;
+using EmbyStatistics.Models;
+using EmbyStatistics.Models.Configuration;
+using EmbyStatistics.Api;
 
-namespace statistics.Configuration
+namespace EmbyStatistics.Configuration
 {
     public class PluginConfiguration : BasePluginConfiguration
     {

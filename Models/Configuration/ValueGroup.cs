@@ -1,4 +1,4 @@
-﻿namespace statistics.Models.Configuration
+﻿namespace EmbyStatistics.Models.Configuration
 {
     public class ValueGroup
     {

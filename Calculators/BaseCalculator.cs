@@ -7,7 +7,7 @@ using MediaBrowser.Controller.Entities.Movies;
 using MediaBrowser.Controller.Entities.TV;
 using MediaBrowser.Controller.Library;
 
-namespace statistics.Calculators
+namespace EmbyStatistics.Calculators
 {
     public abstract class BaseCalculator : IDisposable
     {

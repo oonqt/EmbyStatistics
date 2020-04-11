@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace statistics.Models.Configuration
+namespace EmbyStatistics.Models.Configuration
 {
     public class UserStat
     {

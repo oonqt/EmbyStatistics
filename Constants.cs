@@ -1,4 +1,4 @@
-﻿namespace Statistics
+﻿namespace EmbyStatistics
 {
     internal static class Constants
     {

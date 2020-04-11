@@ -13,12 +13,12 @@ using MediaBrowser.Model.ApiClient;
 using MediaBrowser.Model.Entities;
 using MediaBrowser.Model.IO;
 using MediaBrowser.Model.Querying;
-using statistics.Models.Configuration;
-using Statistics.Api;
-using statistics.Calculators;
+using EmbyStatistics.Models.Configuration;
+using EmbyStatistics.Api;
+using EmbyStatistics.Calculators;
 using MediaBrowser.Model.Logging;
 
-namespace Statistics.Helpers
+namespace EmbyStatistics.Helpers
 {
     public class ShowProgressCalculator : BaseCalculator
     {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace statistics.Models
+namespace EmbyStatistics.Models
 {
     public class Movie
     {

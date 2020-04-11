@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Statistics.Models
+namespace EmbyStatistics.Models
 {
     public class LastSeenModel
     {
